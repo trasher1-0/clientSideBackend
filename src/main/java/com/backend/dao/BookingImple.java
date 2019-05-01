@@ -8,6 +8,7 @@ import org.springframework.stereotype.Repository;
 
 import com.backend.model.Booking;
 import com.backend.service.BookingService;
+import com.mysql.cj.api.Session;
 
 @Repository
 public class BookingImple implements BookingDAO {
@@ -22,23 +23,32 @@ public class BookingImple implements BookingDAO {
 	}
 
 	public List<Booking> list() {
-		// TODO Auto-generated method stub
-		return null;
+		List<Booking> allBookings=sessionFactory.getCurrentSession().createQuery("from Booking").list();
+		return allBookings;
 	}
 
 	public Booking get(long booking_id) {
-		// TODO Auto-generated method stub
-		return null;
+		Booking booking=sessionFactory.getCurrentSession().get(Booking.class,booking_id);
+		return booking;
 	}
 
 	public void update(long booking_id, Booking booking) {
-		// TODO Auto-generated method stub
+		Session session=(Session) sessionFactory.getCurrentSession();
+		Booking allBooking =((org.hibernate.Session) session).byId(Booking.class).load(booking_id);
+		allBooking.setCustomer_name(booking.getCustomer_name());
+		allBooking.setCustomer_id(booking.getCustomer_id());
+		allBooking.setAddress(booking.getAddress());
+		allBooking.setCity(booking.getCity());
+		allBooking.setDate(booking.getDate());
+		allBooking.setTime_slot(booking.getTime_slot());
+		((org.hibernate.Session) session).flush();
 		
 	}
 
 	public void delete(long booking_id) {
-		// TODO Auto-generated method stub
-		
+		Session session=(Session) sessionFactory.getCurrentSession().get(Booking.class,booking_id);
+		Booking booking=((org.hibernate.Session) session).byId(Booking.class).load(booking_id);
+		((org.hibernate.Session) session).delete(booking);
 	}
 
 

@@ -2,33 +2,43 @@ package com.backend.dao;
 
 import java.util.List;
 
+import org.hibernate.SessionFactory;
+
 import com.backend.model.trasherComments;
+import com.mysql.cj.api.Session;
 
 public class trasherCommentsImple implements trasherCommentsDAO {
 
+	private SessionFactory sessionFactory;
+	
 	public long save(trasherComments trasherComment) {
-		// TODO Auto-generated method stub
-		return 0;
+		sessionFactory.getCurrentSession().save(trasherComment);
+		return trasherComment.getComment_id();
 	}
 
 	public trasherComments get(long comment_id) {
-		// TODO Auto-generated method stub
-		return null;
+		trasherComments trasherComment=sessionFactory.getCurrentSession().get(trasherComments.class, comment_id);
+		return trasherComment;
 	}
 
 	public List<trasherComments> list() {
-		// TODO Auto-generated method stub
-		return null;
+		List<trasherComments> allComments=sessionFactory.getCurrentSession().createQuery("from trasherComments").list();
+		return allComments;
 	}
 
-	public void update(long commment_id, trasherComments trasherComment) {
-		// TODO Auto-generated method stub
-		
+	public void update(long comment_id, trasherComments trasherComment) {
+		Session session =(Session) sessionFactory.getCurrentSession();
+		trasherComments oldComment=((org.hibernate.Session) session).byId(trasherComments.class).load(comment_id);
+		oldComment.setComment(trasherComment.getComment());
+		oldComment.setCustomer_id(trasherComment.getComment_id());
+		oldComment.setTrasher_type(trasherComment.getTrasher_type());
+		((org.hibernate.Session) session).flush();
 	}
 
 	public void delete(long comment_id) {
-		// TODO Auto-generated method stub
-		
+		Session session =(Session) sessionFactory.getCurrentSession();
+		trasherComments trasherComment=((org.hibernate.Session) session).byId(trasherComments.class).load(comment_id);
+		((org.hibernate.Session) session).delete(trasherComment);
 	}
 
 }

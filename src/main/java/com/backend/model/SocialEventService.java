@@ -18,6 +18,7 @@ public class SocialEventService {
 	private String city;
 	private String date;
 	private String time_slot;
+	
 	public long getInvoce_id() {
 		return invoce_id;
 	}

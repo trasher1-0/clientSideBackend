@@ -15,6 +15,7 @@ public class Help {
 	private long customer_id;
 	private String help_type;
 	private String help;
+	
 	public long getHelp_id() {
 		return help_id;
 	}

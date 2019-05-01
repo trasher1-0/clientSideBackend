@@ -2,23 +2,27 @@ package com.backend.dao;
 
 import java.util.List;
 
+import org.hibernate.SessionFactory;
+
 import com.backend.model.rattings;
 
 public class rattingsImple implements rattingsDAO{
 
+	private SessionFactory sessionFactory;
+	
 	public long save(rattings ratting) {
-		// TODO Auto-generated method stub
-		return 0;
+		sessionFactory.getCurrentSession().save(ratting);
+		return ratting.getCustomer_id();
 	}
 
 	public rattings get(long customer_id) {
-		// TODO Auto-generated method stub
-		return null;
+		rattings ratting=sessionFactory.getCurrentSession().get(rattings.class,customer_id);
+		return ratting;
 	}
 
 	public List<rattings> list() {
-		// TODO Auto-generated method stub
-		return null;
+		List<rattings> allRattings=sessionFactory.getCurrentSession().createQuery("from rattings").list();
+		return allRattings;
 	}
 
 	public void update(long customer_id, rattings ratting) {

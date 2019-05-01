@@ -18,6 +18,7 @@ public class ServiceInvoice {
 	private String city;
 	private String date;
 	private int time_slot;
+	
 	public long getInvoice_id() {
 		return invoice_id;
 	}

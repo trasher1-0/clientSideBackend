@@ -17,7 +17,7 @@ public interface SocialEventServiceDAO {
 	List<SocialEventService> list();
 	
 	// update the recode
-	void update(long invoce_id,SocialEventService SocialEventService);
+	void update(long invoice_id,SocialEventService socialEventService);
 	
 	// delete the recode
 	void delete(long invoice_id);

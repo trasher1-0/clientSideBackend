@@ -16,6 +16,7 @@ public class Feedbacks {
 	private long feedback_id;
 	private long customer_id;
 	private String feedback;
+	
 	public long getFeedback_id() {
 		return feedback_id;
 	}

@@ -15,6 +15,7 @@ public class trasherComments {
 	private long customer_id;
 	private int trasher_type;
 	private String comment;
+	
 	public long getComment_id() {
 		return comment_id;
 	}

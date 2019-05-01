@@ -17,7 +17,7 @@ public interface trasherCommentsDAO {
 	List<trasherComments> list();
 	
 	// update the recode
-	void update(long commment_id,trasherComments trasherComment);
+	void update(long comment_id,trasherComments trasherComment);
 	
 	// delete the recode
 	void delete(long comment_id);
