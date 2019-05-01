@@ -2,9 +2,12 @@ package com.backend.service;
 
 import java.util.List;
 
+import com.backend.dao.HelpDAO;
 import com.backend.model.Help;
 
 public class HelpServiceImple implements HelpService{
+	
+	private HelpDAO help;
 
 	public long save(Help help) {
 		// TODO Auto-generated method stub

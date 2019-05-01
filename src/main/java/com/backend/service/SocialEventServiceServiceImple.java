@@ -2,10 +2,13 @@ package com.backend.service;
 
 import java.util.List;
 
+import com.backend.dao.SocialEventServiceDAO;
 import com.backend.model.SocialEventService;
 
 public class SocialEventServiceServiceImple implements SocialEventServiceService {
 
+	private SocialEventServiceDAO socialEventService;
+	
 	public long save(SocialEventService socialEventService) {
 		// TODO Auto-generated method stub
 		return 0;

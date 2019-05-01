@@ -2,11 +2,14 @@ package com.backend.service;
 
 import java.util.List;
 
+import com.backend.dao.NotificationDAO;
 import com.backend.model.Notification;
 
 public enum NotificationServiceImple implements NotificationService{
 	;
 
+	private NotificationDAO notification;
+	
 	public long save(Notification notification) {
 		// TODO Auto-generated method stub
 		return 0;

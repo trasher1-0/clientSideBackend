@@ -2,10 +2,13 @@ package com.backend.service;
 
 import java.util.List;
 
+import com.backend.dao.trasherBuyingInvoiceDAO;
 import com.backend.model.trasherBuyingInvoice;
 
 public class trasherBuyingInvoiceServiceImple implements trasherBuyingInvoiceService {
 
+	private trasherBuyingInvoiceDAO trasherBuyingInvoice;
+	
 	public long save(trasherBuyingInvoice trasherBuyingInvoice) {
 		// TODO Auto-generated method stub
 		return 0;

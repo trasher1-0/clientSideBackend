@@ -2,10 +2,13 @@ package com.backend.service;
 
 import java.util.List;
 
+import com.backend.dao.ServiceInvoiceDAO;
 import com.backend.model.ServiceInvoice;
 
 public class ServiceInvoiceServiceImple implements ServiceInvoiceService {
 
+	private ServiceInvoiceDAO serviceInvoice;
+	
 	public long save(ServiceInvoice serviceInvoice) {
 		// TODO Auto-generated method stub
 		return 0;

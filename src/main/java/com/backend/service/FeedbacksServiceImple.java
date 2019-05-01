@@ -2,10 +2,13 @@ package com.backend.service;
 
 import java.util.List;
 
+import com.backend.dao.FeedbacksDAO;
 import com.backend.model.Feedbacks;
 
 public class FeedbacksServiceImple implements FeedbackService{
 
+	private FeedbacksDAO feedback;
+	
 	public long save(Feedbacks feedback) {
 		// TODO Auto-generated method stub
 		return 0;

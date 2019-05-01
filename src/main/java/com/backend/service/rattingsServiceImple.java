@@ -2,9 +2,12 @@ package com.backend.service;
 
 import java.util.List;
 
+import com.backend.dao.rattingsDAO;
 import com.backend.model.rattings;
 
 public class rattingsServiceImple implements rattingsService{
+	
+	private rattingsDAO ratting;
 
 	public long save(rattings ratting) {
 		// TODO Auto-generated method stub
