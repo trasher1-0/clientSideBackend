@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
   xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
   <modelVersion>4.0.0</modelVersion>
@@ -12,6 +13,18 @@
 		<failOnMissingWebXml>false</failOnMissingWebXml>
 	</properties>
   
+=======
+<<<<<<< HEAD
+<project xmlns="http://maven.apache.org/POM/1.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+  <modelVersion>4.0.0</modelVersion>
+  <groupId>com.gayan</groupId>
+  <artifactId>clientBackend</artifactId>
+  <packaging>war</packaging>
+  <version>0.0.1-SNAPSHOT</version>
+  <name>clientBackend Maven Webapp</name>
+  <url>http://maven.apache.org</url>
+>>>>>>> 8036b4e6dbfc0560fa2426e56611608247953ba7
   <dependencies>
     <dependency>
       <groupId>junit</groupId>
@@ -19,7 +32,26 @@
       <version>3.8.1</version>
       <scope>test</scope>
     </dependency>
+<<<<<<< HEAD
 	<!-- Spring MVC Dependency -->
+=======
+    <!-- Spring MVC Dependency -->
+=======
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+  <modelVersion>4.0.0</modelVersion>
+  <groupId>com.trasher</groupId>
+  <artifactId>trasherClientsideBackend</artifactId>
+  <version>0.0.1-SNAPSHOT</version>
+
+	<packaging>war</packaging>
+	<properties>
+		<failOnMissingWebXml>false</failOnMissingWebXml>
+	</properties>
+
+	<dependencies>
+		<!-- Spring MVC Dependency -->
+>>>>>>> 8a6f341e0a180fa8f1ce232d49e034affd084316
+>>>>>>> 8036b4e6dbfc0560fa2426e56611608247953ba7
 		<dependency>
 			<groupId>org.springframework</groupId>
 			<artifactId>spring-webmvc</artifactId>
@@ -68,9 +100,19 @@
 			<version>3.1.0</version>
 			<scope>provided</scope>
 		</dependency>
+<<<<<<< HEAD
   </dependencies>
   <build>
     <finalName>backend</finalName>
+=======
+		
+	</dependencies>
+	<build>
+<<<<<<< HEAD
+	<finalName>clientBackend</finalName>
+=======
+>>>>>>> 8a6f341e0a180fa8f1ce232d49e034affd084316
+>>>>>>> 8036b4e6dbfc0560fa2426e56611608247953ba7
 		<plugins>
 			<plugin>
 				<artifactId>maven-compiler-plugin</artifactId>
@@ -91,5 +133,14 @@
             </configuration>
         </plugin>
 		</plugins>
+<<<<<<< HEAD
   </build>
 </project>
+=======
+	</build>
+<<<<<<< HEAD
+</project>
+=======
+</project>
+>>>>>>> 8a6f341e0a180fa8f1ce232d49e034affd084316
+>>>>>>> 8036b4e6dbfc0560fa2426e56611608247953ba7
