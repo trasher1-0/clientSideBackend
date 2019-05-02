@@ -16,6 +16,7 @@ import com.backend.service.customerDetailsService;
 public class loginAndSignup {
 	
 	private customerDetailsService customerDetailsService;
+	private long customer_id;
 	
 	@PostMapping("/customer/signup/Authentication")
 	
@@ -23,7 +24,7 @@ public class loginAndSignup {
 		String checkAuth =signupAuthentication(customerDetails);
 		
 		if(checkAuth.equals("signup sucess")) {
-			int customer_id=(int) customerDetailsService.save(customerDetails);
+			 customer_id=(int) customerDetailsService.save(customerDetails);
 			// customer_id put into the session
 			
 			return ResponseEntity.ok().body("customer Register with id :"+customer_id);
@@ -90,6 +91,10 @@ public class loginAndSignup {
 						
 		}			
 		return "login fail" ;
+	}
+	
+	public long getCustomerId() {
+		return customer_id;
 	}
 
 }

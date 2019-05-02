@@ -20,8 +20,8 @@ public class trasherCommentsServiceImple implements trasherCommentsService{
 	}
 
 	public List<trasherComments> list() {
-		// TODO Auto-generated method stub
-		return null;
+		
+		return trasherComment.list();
 	}
 
 	public void update(long commment_id, trasherComments trasherComment) {
