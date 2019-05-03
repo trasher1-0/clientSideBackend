@@ -7,11 +7,20 @@ import com.backend.model.rattings;
 
 public class rattingsServiceImple implements rattingsService{
 	
-	private rattingsDAO ratting;
+	private rattingsDAO rattingDAO;
 
-	public long save(rattings ratting) {
-		// TODO Auto-generated method stub
-		return 0;
+	
+	public long saveSmallTrasherRattings(rattings ratting) {
+		 return rattingDAO.saveSmallTrasherRattings(ratting);
+		
+	}
+	
+	public long savePrimumTrasherRattings(rattings ratting) {
+		return rattingDAO.savePrimumTrasherRattings(ratting);
+	}
+	
+	public long saveLargeTrasherRattings(rattings ratting) {
+		return rattingDAO.saveLargeTrasherRattings(ratting);
 	}
 
 	public rattings get(long customer_id) {
@@ -34,4 +43,5 @@ public class rattingsServiceImple implements rattingsService{
 		
 	}
 
+	
 }

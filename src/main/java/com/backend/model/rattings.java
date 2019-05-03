@@ -42,6 +42,7 @@ public class rattings {
 			return "rattings [customer_id=" + customer_id + ", trasher_type=" + trasher_type + ", rated_value="
 					+ rated_value + "]";
 		}
+		
 
 		
 		

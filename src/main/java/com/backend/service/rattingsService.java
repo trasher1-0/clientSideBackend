@@ -6,8 +6,12 @@ import com.backend.model.rattings;
 
 public interface rattingsService {
 
-	//save the record
-			long save(rattings ratting);
+			
+			long saveSmallTrasherRattings(rattings ratting);
+			
+			long savePrimumTrasherRattings(rattings ratting);
+			
+			long saveLargeTrasherRattings(rattings ratting);
 			
 			//get a singel recorde
 			 rattings get(long customer_id);
@@ -20,4 +24,6 @@ public interface rattingsService {
 			
 			// delete the recode
 			void delete(long customer_id);
+
+			
 }

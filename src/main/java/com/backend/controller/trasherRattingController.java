@@ -6,12 +6,15 @@ import org.hibernate.SessionFactory;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RestController;
 
 import com.backend.model.Booking;
 import com.backend.model.rattings;
 import com.backend.service.rattingsService;
 import com.mysql.cj.api.Session;
 
+@RestController
 public class trasherRattingController {
 
 	private rattingsService rattingService;
@@ -22,7 +25,36 @@ public class trasherRattingController {
 	int isRatedToPrimumTrasher=0;
 	int isRatedToLargerTrasher=0;
 	
+	private rattings ratting;
+	private long customer_id;
 	
+	// save the smallTrasher rattings
+	
+	@RequestMapping("/dashboad/smallTrasherRattings")
+	
+	public ResponseEntity<?> saveSmallTrasherRattings(@RequestBody rattings ratting){
+		rattingService.saveSmallTrasherRattings(ratting);
+		return ResponseEntity.ok().body("ratted for small Trasher by customer id "+ customer_id);
+		
+	}
+	
+	// save the primumTrasher rattings 
+	@RequestMapping("/dashboad/primumTrasherRattings")
+	
+	public ResponseEntity<?> savePrimumTrasherRattings(@RequestBody rattings ratting){
+		rattingService.savePrimumTrasherRattings(ratting);
+		return ResponseEntity.ok().body("ratted for primum Trasher by customer id "+ customer_id);
+		
+	}
+	
+	// save the largeTrasher rattings 
+	@RequestMapping("/dashboad/largeTrasherRattings")
+	
+	public ResponseEntity<?> saveLargeTrasherRattings(@RequestBody rattings ratting){
+		rattingService.saveLargeTrasherRattings(ratting);
+		return ResponseEntity.ok().body("ratted for large Trasher by customer id "+ customer_id);
+		
+	}
 	
 		
 	public void getRattings(long customer_id) {
