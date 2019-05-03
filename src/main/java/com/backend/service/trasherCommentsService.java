@@ -6,8 +6,12 @@ import com.backend.model.trasherComments;
 
 public interface trasherCommentsService {
 
-	//save the record
-		long save(trasherComments trasherComment);
+		
+		long saveSmallTrasherComment(trasherComments comment);
+		
+		long savePrimumTrasherComment(trasherComments comment);
+		
+		long saveLargeTrasherComments(trasherComments comment);
 		
 		//get a singel recorde
 		 trasherComments get(long comment_id);

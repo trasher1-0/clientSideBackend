@@ -11,9 +11,20 @@ public class trasherCommentsImple implements trasherCommentsDAO {
 
 	private SessionFactory sessionFactory;
 	
-	public long save(trasherComments trasherComment) {
-		sessionFactory.getCurrentSession().save(trasherComment);
-		return trasherComment.getComment_id();
+	
+	public long saveSmallTrasherComment(trasherComments comment) {
+		sessionFactory.getCurrentSession().save(comment);
+		return comment.getComment_id();
+	}
+	
+	public long savePrimumTrasherComment(trasherComments comment) {
+		sessionFactory.getCurrentSession().save(comment);
+		return comment.getComment_id();
+	}
+	
+	public long saveLargeTrasherComments(trasherComments comment) {
+		sessionFactory.getCurrentSession().save(comment);
+		return comment.getComment_id();
 	}
 
 	public trasherComments get(long comment_id) {
