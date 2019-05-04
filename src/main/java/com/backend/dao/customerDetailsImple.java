@@ -30,15 +30,15 @@ public class customerDetailsImple implements customerDetailsDAO {
 		return customerList;
 	}
 
-	public void update(long customer_id, customerDetails customerDetails) {
+	public void update(long customer_id, customerDetails customerInfo) {
 		Session session = (Session) sessionFactory.getCurrentSession();
 		customerDetails oldCustomer=((org.hibernate.Session) session).byId(customerDetails.class).load(customer_id);
-		oldCustomer.setUser_name(customerDetails.getUser_name());
-		oldCustomer.setPassword(customerDetails.getPassword());
-		oldCustomer.setEmail(customerDetails.getEmail());
-		oldCustomer.setCity(customerDetails.getCity());
-		oldCustomer.setTel(customerDetails.getTel());
-		oldCustomer.setProf_pic(customerDetails.getProf_pic());
+		oldCustomer.setUser_name(customerInfo.getUser_name());
+		oldCustomer.setPassword(customerInfo.getPassword());
+		oldCustomer.setEmail(customerInfo.getEmail());
+		oldCustomer.setCity(customerInfo.getCity());
+		oldCustomer.setTel(customerInfo.getTel());
+		oldCustomer.setProf_pic(customerInfo.getProf_pic());
 		((org.hibernate.Session) session).flush();
 	}
 

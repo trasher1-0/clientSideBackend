@@ -16,16 +16,6 @@ import com.backend.service.trasherCommentsService;
 @RestController
 public class trasherCommentsController {
 	
-	// requestMapping urls
-	
-	// ../customer/smallTrasher/comment
-	
-	// ../customer/primumTrasher/comment
-	
-	// ../customer/largeTrasher/comment
-	
-	// method for return all the comments for purticular trasher
-	
 	private trasherCommentsService trasherComment;
 	private List<trasherComments> smallTrasherComment;
 	private List<trasherComments> primumTrasherComment;

@@ -14,9 +14,8 @@ public class customerDetailsServiceImple implements customerDetailsService{
 		return customerDetailsDAO.save(customerDetails);
 	}
 
-	public customerDetails get(long customet_id) {
-		// TODO Auto-generated method stub
-		return null;
+	public customerDetails get(long customer_id) {
+		return customerDetailsDAO.get(customer_id);
 	}
 
 	public List<customerDetails> list() {
@@ -24,8 +23,8 @@ public class customerDetailsServiceImple implements customerDetailsService{
 		return customerDetailsDAO.list();
 	}
 
-	public void update(long customer_id, customerDetails customerDetails) {
-		// TODO Auto-generated method stub
+	public void update(long customer_id, customerDetails customerInfo) {
+		customerDetailsDAO.update(customer_id, customerInfo);
 		
 	}
 

@@ -11,13 +11,13 @@ public interface customerDetailsDAO {
 	long save(customerDetails customerDetails);
 	
 	//get a singel recorde
-	customerDetails get(long customet_id);
+	customerDetails get(long customer_id);
 	
 	// get all the recode
 	List<customerDetails> list();
 	
 	// update the recode
-	void update(long customer_id,customerDetails customerDetails);
+	void update(long customer_id,customerDetails customerInfo);
 	
 	// delete the recode
 	void delete(long customer_id);
