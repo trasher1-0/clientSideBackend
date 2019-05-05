@@ -62,11 +62,9 @@ public class userProfileController {
 				if(customer.get(i).getEmail()== customerInfo.getEmail()) {
 					return ResponseEntity.ok().body("email there exists !");
 				}
-				customer.update(customer_id,customerInfo);
-				return ResponseEntity.ok().body("sucessfully updated customer "+customer_id);	
 			}
 		}
 		customer.update(customer_id,customerInfo);
-		return ResponseEntity.ok().body("sucessfully updated customer "+customer_id);
-	}	
+		return ResponseEntity.ok().body("sucessfully updated customer "+customer_id);	
+	}
 }

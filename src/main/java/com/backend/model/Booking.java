@@ -1,9 +1,12 @@
 package com.backend.model;
 
+import java.util.List;
+
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.OneToMany;
 
 @Entity(name="booking")
 public class Booking {
@@ -16,14 +19,22 @@ public class Booking {
 	private String customer_name;
 	private String address;
 	private String city;
-	private String date;
-	private int time_slot;
 	
+	@OneToMany (mappedBy="booking")
+	private List<BookingTimeSlots> bookingTimeSlots;
+	
+	
+	public List<BookingTimeSlots> getBookingTimeSlots() {
+		return bookingTimeSlots;
+	}
+	public void setBookingTimeSlots(List<BookingTimeSlots> bookingTimeSlots) {
+		this.bookingTimeSlots = bookingTimeSlots;
+	}
 	public static long getBooking_id() {
 		return booking_id;
 	}
-	public void setBooking_id(long booking_id) {
-		this.booking_id = booking_id;
+	public static void setBooking_id(long booking_id) {
+		Booking.booking_id = booking_id;
 	}
 	public long getCustomer_id() {
 		return customer_id;
@@ -49,23 +60,14 @@ public class Booking {
 	public void setCity(String city) {
 		this.city = city;
 	}
-	public String getDate() {
-		return date;
-	}
-	public void setDate(String date) {
-		this.date = date;
-	}
-	public int getTime_slot() {
-		return time_slot;
-	}
-	public void setTime_slot(int time_slot) {
-		this.time_slot = time_slot;
-	}
 	@Override
 	public String toString() {
-		return "Booking [booking_id=" + booking_id + ", customer_id=" + customer_id + ", customer_name=" + customer_name
-				+ ", address=" + address + ", city=" + city + ", date=" + date + ", time_slot=" + time_slot + "]";
+		return "Booking [customer_id=" + customer_id + ", customer_name=" + customer_name + ", address=" + address
+				+ ", city=" + city + "]";
 	}
+	
+	
+	
 	
 	
 	

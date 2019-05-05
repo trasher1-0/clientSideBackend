@@ -33,8 +33,6 @@ public class SocialEventServiceImple implements SocialEventServiceDAO{
 		oldSocialEventService.setCity(socialEventService.getCity());
 		oldSocialEventService.setCustomer_id(socialEventService.getCustomer_id());
 		oldSocialEventService.setCustomer_name(socialEventService.getCustomer_name());
-		oldSocialEventService.setDate(socialEventService.getDate());
-		oldSocialEventService.setTime_slot(socialEventService.getTime_slot());
 		session.flush();
 	}
 

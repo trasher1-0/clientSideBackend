@@ -7,7 +7,7 @@ import com.backend.model.trasherBuyingInvoice;
 public interface trasherBuyingInvoiceService {
 
 	//save the record
-		long save(trasherBuyingInvoice trasherBuyingInvoice);
+		long save(long customer_id,trasherBuyingInvoice trasherBuyingInvoice);
 		
 		//get a singel recorde
 		 trasherBuyingInvoice get(long invoice_id);

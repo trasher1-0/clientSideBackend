@@ -39,8 +39,6 @@ public class BookingImple implements BookingDAO {
 		allBooking.setCustomer_id(booking.getCustomer_id());
 		allBooking.setAddress(booking.getAddress());
 		allBooking.setCity(booking.getCity());
-		allBooking.setDate(booking.getDate());
-		allBooking.setTime_slot(booking.getTime_slot());
 		((org.hibernate.Session) session).flush();
 		
 	}

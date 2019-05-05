@@ -32,8 +32,6 @@ public class ServiceInvoiceImple implements ServiceInvoiceDAO {
 		oldInvoice.setCustomer_name(serviceInvoice.getCustomer_name());
 		oldInvoice.setAddress(serviceInvoice.getAddress());
 		oldInvoice.setCity(serviceInvoice.getCity());
-		oldInvoice.setDate(serviceInvoice.getDate());
-		oldInvoice.setTime_slot(serviceInvoice.getTime_slot());
 		((org.hibernate.Session) session).flush();
 		
 	}

@@ -9,7 +9,7 @@ public class trasherBuyingInvoiceServiceImple implements trasherBuyingInvoiceSer
 
 	private trasherBuyingInvoiceDAO trasherBuyingInvoice;
 	
-	public long save(trasherBuyingInvoice trasherBuyingInvoice) {
+	public long save(long customer_id,trasherBuyingInvoice trasherBuyingInvoice) {
 		// TODO Auto-generated method stub
 		return 0;
 	}

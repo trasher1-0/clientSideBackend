@@ -12,7 +12,7 @@ public class trasherBuyingInvoice {
 	@GeneratedValue(strategy=GenerationType.IDENTITY)
 	
 	private long invoice_id;
-	private long customer_id;
+	public long customer_id;
 	private String customer_name;
 	private String address;
 	private String city;

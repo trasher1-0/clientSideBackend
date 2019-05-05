@@ -11,7 +11,8 @@ public class trasherBuyingInvoiceImple implements trasherBuyingInvoiceDAO{
 
 	private SessionFactory sessionFactory;
 	
-	public long save(trasherBuyingInvoice trasherBuyingInvoice) {
+	public long save(long customer_id,trasherBuyingInvoice trasherBuyingInvoice) {
+		trasherBuyingInvoice.customer_id=customer_id;
 		sessionFactory.getCurrentSession().save(trasherBuyingInvoice);
 		return trasherBuyingInvoice.getInvoice_id();
 	}

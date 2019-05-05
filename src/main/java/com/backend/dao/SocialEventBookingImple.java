@@ -33,8 +33,6 @@ public class SocialEventBookingImple implements SocialEventBookingDAO {
 		oldSocialEventBooking.setCity(socialEventBooking.getCity());
 		oldSocialEventBooking.setCustomer_name(socialEventBooking.getCustomer_name());
 		oldSocialEventBooking.setCustomer_id(socialEventBooking.getCustomer_id());
-		oldSocialEventBooking.setDate(socialEventBooking.getDate());
-		oldSocialEventBooking.setTime_slot(socialEventBooking.getTime_slot());
 		((org.hibernate.Session) session).flush();
 		
 	}
