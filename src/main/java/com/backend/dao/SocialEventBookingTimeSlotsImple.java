@@ -2,10 +2,15 @@ package com.backend.dao;
 
 import java.util.List;
 
+import org.hibernate.SessionFactory;
+
 import com.backend.model.SocialEventBookingTimeSlots;
 
 public class SocialEventBookingTimeSlotsImple implements SocialEventBookingTimeSlotsDAO{
 
+	private SessionFactory sessionFactory;
+	public List<SocialEventBookingTimeSlots> allSocialEventBookingTimeSlots;
+	
 	@Override
 	public long save(SocialEventBookingTimeSlots socialEventBookingTimeSlot) {
 		// TODO Auto-generated method stub
@@ -20,8 +25,8 @@ public class SocialEventBookingTimeSlotsImple implements SocialEventBookingTimeS
 
 	@Override
 	public List<SocialEventBookingTimeSlots> list() {
-		// TODO Auto-generated method stub
-		return null;
+		allSocialEventBookingTimeSlots=sessionFactory.getCurrentSession().createQuery("from SocialEventBookingTimeSlots").list();
+		return allSocialEventBookingTimeSlots;
 	}
 
 	@Override

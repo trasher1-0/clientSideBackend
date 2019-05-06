@@ -2,10 +2,13 @@ package com.backend.service;
 
 import java.util.List;
 
+import com.backend.dao.ServiceInvoiceTimeSlotDAO;
 import com.backend.model.ServiceInvoiceTimeSolts;
 
 public class ServiceInvoiceTimeSlotsServiceImple implements ServiceInvoiceTimeSlotsService{
 
+	private ServiceInvoiceTimeSlotDAO serviceInvoiceTimeSlotDAO;
+	
 	@Override
 	public long save(ServiceInvoiceTimeSolts serviceInvoiceTimeSlot) {
 		// TODO Auto-generated method stub
@@ -20,8 +23,7 @@ public class ServiceInvoiceTimeSlotsServiceImple implements ServiceInvoiceTimeSl
 
 	@Override
 	public List<ServiceInvoiceTimeSolts> list() {
-		// TODO Auto-generated method stub
-		return null;
+		return serviceInvoiceTimeSlotDAO.list();
 	}
 
 	@Override

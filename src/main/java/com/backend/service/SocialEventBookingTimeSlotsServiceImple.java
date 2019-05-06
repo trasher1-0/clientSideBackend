@@ -2,10 +2,13 @@ package com.backend.service;
 
 import java.util.List;
 
+import com.backend.dao.SocialEventBookingTimeSlotsDAO;
 import com.backend.model.SocialEventBookingTimeSlots;
 
 public class SocialEventBookingTimeSlotsServiceImple implements SocialEventBookingTimeSlotsService {
 
+	private SocialEventBookingTimeSlotsDAO socialEventBookingTimeSlotsDAO;
+	
 	@Override
 	public long save(SocialEventBookingTimeSlots socialEventBookingTimeSlots) {
 		// TODO Auto-generated method stub
@@ -20,8 +23,7 @@ public class SocialEventBookingTimeSlotsServiceImple implements SocialEventBooki
 
 	@Override
 	public List<SocialEventBookingTimeSlots> list() {
-		// TODO Auto-generated method stub
-		return null;
+		return socialEventBookingTimeSlotsDAO.list();
 	}
 
 	@Override

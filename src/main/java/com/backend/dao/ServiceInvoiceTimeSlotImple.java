@@ -2,9 +2,14 @@ package com.backend.dao;
 
 import java.util.List;
 
+import org.hibernate.SessionFactory;
+
 import com.backend.model.ServiceInvoiceTimeSolts;
 
 public class ServiceInvoiceTimeSlotImple implements ServiceInvoiceTimeSlotDAO{
+	
+	private SessionFactory sessionFactory;
+	public List<ServiceInvoiceTimeSolts> allServiceInvoiceTimeSlots;
 
 	@Override
 	public long save(ServiceInvoiceTimeSolts serviceInvoiceTimeSlots) {
@@ -20,8 +25,8 @@ public class ServiceInvoiceTimeSlotImple implements ServiceInvoiceTimeSlotDAO{
 
 	@Override
 	public List<ServiceInvoiceTimeSolts> list() {
-		// TODO Auto-generated method stub
-		return null;
+		allServiceInvoiceTimeSlots=sessionFactory.getCurrentSession().createQuery("from ServiceInvoiceTimeSolts").list();
+		return allServiceInvoiceTimeSlots;
 	}
 
 	@Override

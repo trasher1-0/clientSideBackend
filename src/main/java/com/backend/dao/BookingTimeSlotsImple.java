@@ -2,10 +2,15 @@ package com.backend.dao;
 
 import java.util.List;
 
+import org.hibernate.SessionFactory;
+
 import com.backend.model.BookingTimeSlots;
 
 public class BookingTimeSlotsImple implements BookingTimeSlotsDAO {
 
+	private SessionFactory sessionFactory;
+	public List<BookingTimeSlots> allBookingTimeSlots;
+	
 	@Override
 	public long save(BookingTimeSlots bookingTimeSlots) {
 		// TODO Auto-generated method stub
@@ -20,8 +25,8 @@ public class BookingTimeSlotsImple implements BookingTimeSlotsDAO {
 
 	@Override
 	public List<BookingTimeSlots> list() {
-		// TODO Auto-generated method stub
-		return null;
+		allBookingTimeSlots=sessionFactory.getCurrentSession().createQuery("from BookingTimeSlots").list();
+		return allBookingTimeSlots;
 	}
 
 	@Override
