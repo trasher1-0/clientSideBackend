@@ -28,17 +28,21 @@ public class userProfileController {
 	private loginAndSignup loginAndSignupController;
 	private long customer_id;
 	private customerDetailsService customer;
-	private customerDetails customerInfo;
+	private customerDetails customerInfo,customerDetails;
+	private trasherBuyingInvoice buyingInvoices;
+	private trasherBuyingController buyingController;
+	private List<trasherBuyingInvoice> allBuyingInvoices;
 	
 	@RequestMapping("/customer/userProfile")
 	
-	public ResponseEntity<?> renderUserProfile(){
+	public void renderUserProfile(){
 		customer_id=loginAndSignupController.getCustomerId();
-		
+		// get all the buying invoices of perticular customer
+		allBuyingInvoices= buyingController.getAllInvoices(customer_id);
 		// get perticular customer object
-		getCustomerDetails(customer_id);
+		customerDetails=getCustomerDetails(customer_id);
 		
-		return null;
+		
 	}
 	
 	

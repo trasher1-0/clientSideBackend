@@ -44,4 +44,5 @@ public class trasherBuyingInvoiceImple implements trasherBuyingInvoiceDAO{
 		((org.hibernate.Session) session).delete(buyingInvoice);
 	}
 
+	
 }
