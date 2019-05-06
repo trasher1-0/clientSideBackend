@@ -20,4 +20,9 @@ public class serviceInvoiceController {
 		return null;
 		
 	}
+	
+	@RequestMapping("/customer/getService")
+	public void getAllTheBookings() {
+		
+	}
 }
