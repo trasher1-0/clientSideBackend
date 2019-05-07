@@ -7,11 +7,10 @@ import com.backend.model.ServiceInvoice;
 
 public class ServiceInvoiceServiceImple implements ServiceInvoiceService {
 
-	private ServiceInvoiceDAO serviceInvoice;
+	private ServiceInvoiceDAO serviceInvoiceDAO;
 	
 	public long save(ServiceInvoice serviceInvoice) {
-		// TODO Auto-generated method stub
-		return 0;
+		return serviceInvoiceDAO.save(serviceInvoice);
 	}
 
 	public ServiceInvoice get(long invoice_id) {

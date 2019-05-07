@@ -8,7 +8,7 @@ import com.backend.model.ServiceInvoiceTimeSolts;
 public interface ServiceInvoiceTimeSlotsService {
 
 	//save the record
-		long save(ServiceInvoiceTimeSolts serviceInvoiceTimeSlot);
+		long save(long invoice_id,List<ServiceInvoiceTimeSolts> serviceInvoiceTimeSlot);
 		
 		//get a singel recorde
 		ServiceInvoiceTimeSolts get(long invoice_id);
@@ -17,7 +17,7 @@ public interface ServiceInvoiceTimeSlotsService {
 		List<ServiceInvoiceTimeSolts> list();
 		
 		// update the recode
-		void update(long invoice_id,ServiceInvoiceTimeSolts serviceInvoiceTimeSlot);
+		void update(long invoice_id,List<ServiceInvoiceTimeSolts> serviceInvoiceTimeSlot);
 		
 		// delete the recode
 		void delete(long invoice_id);

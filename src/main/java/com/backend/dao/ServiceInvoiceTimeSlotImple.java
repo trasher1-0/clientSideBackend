@@ -10,10 +10,14 @@ public class ServiceInvoiceTimeSlotImple implements ServiceInvoiceTimeSlotDAO{
 	
 	private SessionFactory sessionFactory;
 	public List<ServiceInvoiceTimeSolts> allServiceInvoiceTimeSlots;
+	public ServiceInvoiceTimeSolts serviceInvoiceTimeSlot;
 
 	@Override
-	public long save(ServiceInvoiceTimeSolts serviceInvoiceTimeSlots) {
-		// TODO Auto-generated method stub
+	public long save(long invoice_id,List<ServiceInvoiceTimeSolts> serviceInvoiceTimeSlots) {
+		for(int i=0;i<serviceInvoiceTimeSlots.size();i++) {
+			serviceInvoiceTimeSlot.setInvoice_id(invoice_id);
+			sessionFactory.getCurrentSession().save(serviceInvoiceTimeSlots.get(i));
+		}
 		return 0;
 	}
 

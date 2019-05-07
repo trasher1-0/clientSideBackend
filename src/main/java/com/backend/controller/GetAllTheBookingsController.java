@@ -34,7 +34,7 @@ public class GetAllTheBookingsController {
 		return serviceInvoice_timeSlots;
 	}
 	
-	public List<SocialEventBookingTimeSlots> getAllTheServiceEventBookingTimeSlots(){
+	public List<SocialEventBookingTimeSlots> getAllTheSocialEventBookingTimeSlots(){
 		socialEventBooking_timeSlots=socialEventBookingTimeSlotsService.list();
 		return socialEventBooking_timeSlots;
 	}

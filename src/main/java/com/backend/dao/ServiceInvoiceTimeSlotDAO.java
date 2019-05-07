@@ -7,7 +7,7 @@ import com.backend.model.ServiceInvoiceTimeSolts;
 public interface ServiceInvoiceTimeSlotDAO {
 
 	//save the record
-		long save(ServiceInvoiceTimeSolts serviceInvoiceTimeSlots);
+		long save(long invoice_id,List<ServiceInvoiceTimeSolts> serviceInvoiceTimeSlots);
 		
 		//get a singel recorde
 		ServiceInvoiceTimeSolts get(long invoice_id);

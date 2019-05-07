@@ -10,9 +10,8 @@ public class ServiceInvoiceTimeSlotsServiceImple implements ServiceInvoiceTimeSl
 	private ServiceInvoiceTimeSlotDAO serviceInvoiceTimeSlotDAO;
 	
 	@Override
-	public long save(ServiceInvoiceTimeSolts serviceInvoiceTimeSlot) {
-		// TODO Auto-generated method stub
-		return 0;
+	public long save(long invoice_id,List<ServiceInvoiceTimeSolts> serviceInvoiceTimeSlots) {
+		return serviceInvoiceTimeSlotDAO.save(invoice_id, serviceInvoiceTimeSlots);
 	}
 
 	@Override
@@ -27,7 +26,7 @@ public class ServiceInvoiceTimeSlotsServiceImple implements ServiceInvoiceTimeSl
 	}
 
 	@Override
-	public void update(long invoice_id, ServiceInvoiceTimeSolts serviceInvoiceTimeSlot) {
+	public void update(long invoice_id, List<ServiceInvoiceTimeSolts> serviceInvoiceTimeSlot) {
 		// TODO Auto-generated method stub
 		
 	}
@@ -37,5 +36,7 @@ public class ServiceInvoiceTimeSlotsServiceImple implements ServiceInvoiceTimeSl
 		// TODO Auto-generated method stub
 		
 	}
+
+	
 
 }
